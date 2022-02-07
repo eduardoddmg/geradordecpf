@@ -17,7 +17,7 @@ btn.addEventListener('click', () => {
         counter--;
     }, 1000);
     counter = 5;
-    location.reload();
+    Location.reload();
 });
 
 
