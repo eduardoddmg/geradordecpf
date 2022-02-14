@@ -1,4 +1,3 @@
-let cpfAleatorio = '';
 
 function rand(max, min)
 {
@@ -7,6 +6,7 @@ function rand(max, min)
 
 let cpf = rand(100000000, 999999999);
 let numeros = []
+
 for (let i = 1; i < 10; i++)
 {
     numeros.unshift(parseInt(cpf%(10**1)));
@@ -17,6 +17,7 @@ for (let i = 1; i < 10; i++)
 class VerificadorCpf1 {
     constructor(cpf, valor_multiplicado, valor_soma, aux, counter)
     {
+        numeros = [];
         this.cpf = cpf;
         this.valor_multiplicado = valor_multiplicado;
         this.valor_soma = valor_soma;
@@ -63,6 +64,7 @@ class VerificadorCpf2 {
 }
     function geradorCpf()
     {
+        numeros = [];
         new VerificadorCpf1(numeros, 0,0,numeros.length+1,0);
         new VerificadorCpf2(numeros,0,0,numeros.length+1,0);
         numeros = String(numeros);
